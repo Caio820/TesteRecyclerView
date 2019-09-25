@@ -1,20 +1,18 @@
 package com.example.testerecyclerview.model;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "list_item")
 public class ListItem {
 
-    private String head;
-    private String desc;
+    @PrimaryKey
+    public int uid;
 
-    // Constructor
-    public ListItem(String head, String desc) {
-        this.head = head;
-        this.desc = desc;
-    }
-    // Getters
-    public String getHead() {
-        return head;
-    }
-    public String getDesc() {
-        return desc;
-    }
+    @ColumnInfo(name = "head")
+    public String head;
+    @ColumnInfo(name = "desc")
+    public String desc;
+
 }
