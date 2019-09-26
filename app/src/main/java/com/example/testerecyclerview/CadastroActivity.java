@@ -25,7 +25,7 @@ public class CadastroActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 AppDatabase db = Room.databaseBuilder(getApplicationContext(),
-                        AppDatabase.class, "database-name").allowMainThreadQueries().build();
+                        AppDatabase.class, "database-name1").allowMainThreadQueries().build();
 
                 ListItem item = new ListItem();
                 EditText textHead = findViewById(R.id.editTextHead);

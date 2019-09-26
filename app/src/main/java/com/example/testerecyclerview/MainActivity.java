@@ -42,9 +42,14 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
         listItems = new ArrayList<>();
         AppDatabase db = Room.databaseBuilder(getApplicationContext(),
-                AppDatabase.class, "database-name").allowMainThreadQueries().build();
+                AppDatabase.class, "database-name1").allowMainThreadQueries().build();
         listItems = db.itemDao().getAll();
 
         adapter = new MyAdapter(listItems, this);

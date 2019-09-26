@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "list_item")
 public class ListItem {
 
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     public int uid;
 
     @ColumnInfo(name = "head")
